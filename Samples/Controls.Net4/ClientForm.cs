@@ -485,5 +485,14 @@ namespace Opc.Ua.Sample.Controls
             }
         }
 
+        private void ClientForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EndpointSelectorCTRL_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

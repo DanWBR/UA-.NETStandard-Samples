@@ -65,10 +65,10 @@ namespace Opc.Ua.Sample.Controls
             this.NextBTN = new System.Windows.Forms.Button();
             this.ReadBTN = new System.Windows.Forms.Button();
             this.SplitterPN = new System.Windows.Forms.SplitContainer();
-            this.MainPN = new System.Windows.Forms.Panel();
             this.BrowseCTRL = new Opc.Ua.Sample.Controls.BrowseTreeCtrl();
             this.ReadResultsCTRL = new Opc.Ua.Client.Controls.DataListCtrl();
             this.ReadValuesCTRL = new Opc.Ua.Sample.Controls.ReadValueListCtrl();
+            this.MainPN = new System.Windows.Forms.Panel();
             this.ButtonsPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitterPN)).BeginInit();
             this.SplitterPN.Panel1.SuspendLayout();
@@ -152,16 +152,6 @@ namespace Opc.Ua.Sample.Controls
             this.SplitterPN.SplitterDistance = 291;
             this.SplitterPN.TabIndex = 3;
             // 
-            // MainPN
-            // 
-            this.MainPN.Controls.Add(this.SplitterPN);
-            this.MainPN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPN.Location = new System.Drawing.Point(0, 0);
-            this.MainPN.Name = "MainPN";
-            this.MainPN.Padding = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.MainPN.Size = new System.Drawing.Size(692, 395);
-            this.MainPN.TabIndex = 4;
-            // 
             // BrowseCTRL
             // 
             this.BrowseCTRL.AllowDrop = true;
@@ -198,6 +188,16 @@ namespace Opc.Ua.Sample.Controls
             this.ReadValuesCTRL.Size = new System.Drawing.Size(391, 392);
             this.ReadValuesCTRL.TabIndex = 1;
             // 
+            // MainPN
+            // 
+            this.MainPN.Controls.Add(this.SplitterPN);
+            this.MainPN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPN.Location = new System.Drawing.Point(0, 0);
+            this.MainPN.Name = "MainPN";
+            this.MainPN.Padding = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.MainPN.Size = new System.Drawing.Size(692, 395);
+            this.MainPN.TabIndex = 4;
+            // 
             // ReadDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +208,7 @@ namespace Opc.Ua.Sample.Controls
             this.Name = "ReadDlg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Read";
+            this.Load += new System.EventHandler(this.ReadDlg_Load);
             this.ButtonsPN.ResumeLayout(false);
             this.SplitterPN.Panel1.ResumeLayout(false);
             this.SplitterPN.Panel2.ResumeLayout(false);

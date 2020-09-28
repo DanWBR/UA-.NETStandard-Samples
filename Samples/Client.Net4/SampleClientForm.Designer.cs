@@ -61,17 +61,18 @@ namespace Opc.Ua.Sample
             // 
             // SessionsCTRL
             // 
-            this.SessionsCTRL.Size = new System.Drawing.Size(295, 320);
+            this.SessionsCTRL.Size = new System.Drawing.Size(295, 259);
             // 
             // BrowseCTRL
             // 
-            this.BrowseCTRL.Size = new System.Drawing.Size(709, 320);
+            this.BrowseCTRL.Size = new System.Drawing.Size(709, 259);
             // 
             // SampleClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1008, 562);
             this.Name = "SampleClientForm";
+            this.Load += new System.EventHandler(this.SampleClientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

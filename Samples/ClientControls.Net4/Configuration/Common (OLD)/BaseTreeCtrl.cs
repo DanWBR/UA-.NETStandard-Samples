@@ -57,7 +57,7 @@ namespace Opc.Ua.Client.Controls
         /// <summary>
         /// The TreeView contained in the Control.
         /// </summary>
-        protected System.Windows.Forms.TreeView NodesTV;
+        public System.Windows.Forms.TreeView NodesTV;
 
 		/// <summary>
 		/// Raised whenever a node is 'picked' in the control.

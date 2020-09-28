@@ -71,6 +71,7 @@ namespace Opc.Ua.Sample.Controls
             this.Task_TestMI = new System.Windows.Forms.ToolStripMenuItem();
             this.DiscoveyrMI = new System.Windows.Forms.ToolStripMenuItem();
             this.DiscoverServersMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.DiscoveryServersOnNetworkMI = new System.Windows.Forms.ToolStripMenuItem();
             this.Discovery_RegisterMI = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,12 +80,11 @@ namespace Opc.Ua.Sample.Controls
             this.ServerStatusLB = new System.Windows.Forms.ToolStripStatusLabel();
             this.MainPN = new System.Windows.Forms.SplitContainer();
             this.SessionsPanel = new System.Windows.Forms.SplitContainer();
+            this.EndpointSelectorCTRL = new Opc.Ua.Client.Controls.EndpointSelectorCtrl();
+            this.clientHeaderBranding1 = new Opc.Ua.Client.Controls.HeaderBranding();
             this.SessionsCTRL = new Opc.Ua.Sample.Controls.SessionTreeCtrl();
             this.BrowseCTRL = new Opc.Ua.Sample.Controls.BrowseTreeCtrl();
             this.NotificationsCTRL = new Opc.Ua.Sample.Controls.NotificationMessageListCtrl();
-            this.EndpointSelectorCTRL = new Opc.Ua.Client.Controls.EndpointSelectorCtrl();
-            this.clientHeaderBranding1 = new Opc.Ua.Client.Controls.HeaderBranding();
-            this.DiscoveryServersOnNetworkMI = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.StatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainPN)).BeginInit();
@@ -160,7 +160,7 @@ namespace Opc.Ua.Sample.Controls
             this.toolStripSeparator1,
             this.Task_TestMI});
             this.TaskMI.Name = "TaskMI";
-            this.TaskMI.Size = new System.Drawing.Size(42, 20);
+            this.TaskMI.Size = new System.Drawing.Size(41, 20);
             this.TaskMI.Text = "Task";
             // 
             // NewWindowMI
@@ -205,6 +205,13 @@ namespace Opc.Ua.Sample.Controls
             this.DiscoverServersMI.Size = new System.Drawing.Size(185, 22);
             this.DiscoverServersMI.Text = "Servers...";
             this.DiscoverServersMI.Click += new System.EventHandler(this.DiscoverServersMI_Click);
+            // 
+            // DiscoveryServersOnNetworkMI
+            // 
+            this.DiscoveryServersOnNetworkMI.Name = "DiscoveryServersOnNetworkMI";
+            this.DiscoveryServersOnNetworkMI.Size = new System.Drawing.Size(185, 22);
+            this.DiscoveryServersOnNetworkMI.Text = "Servers on Network...";
+            this.DiscoveryServersOnNetworkMI.Click += new System.EventHandler(this.DiscoveryServersOnNetworkMI_Click);
             // 
             // Discovery_RegisterMI
             // 
@@ -286,6 +293,34 @@ namespace Opc.Ua.Sample.Controls
             this.SessionsPanel.SplitterDistance = 162;
             this.SessionsPanel.TabIndex = 5;
             // 
+            // EndpointSelectorCTRL
+            // 
+            this.EndpointSelectorCTRL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EndpointSelectorCTRL.Location = new System.Drawing.Point(0, 114);
+            this.EndpointSelectorCTRL.MaximumSize = new System.Drawing.Size(2048, 27);
+            this.EndpointSelectorCTRL.MinimumSize = new System.Drawing.Size(100, 27);
+            this.EndpointSelectorCTRL.Name = "EndpointSelectorCTRL";
+            this.EndpointSelectorCTRL.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.EndpointSelectorCTRL.SelectedEndpoint = null;
+            this.EndpointSelectorCTRL.Size = new System.Drawing.Size(553, 27);
+            this.EndpointSelectorCTRL.TabIndex = 2;
+            this.EndpointSelectorCTRL.ConnectEndpoint += new Opc.Ua.Client.Controls.ConnectEndpointEventHandler(this.EndpointSelectorCTRL_ConnectEndpoint);
+            this.EndpointSelectorCTRL.EndpointsChanged += new System.EventHandler(this.EndpointSelectorCTRL_OnChange);
+            this.EndpointSelectorCTRL.Load += new System.EventHandler(this.EndpointSelectorCTRL_Load);
+            // 
+            // clientHeaderBranding1
+            // 
+            this.clientHeaderBranding1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clientHeaderBranding1.BackColor = System.Drawing.Color.White;
+            this.clientHeaderBranding1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.clientHeaderBranding1.Location = new System.Drawing.Point(0, 24);
+            this.clientHeaderBranding1.MaximumSize = new System.Drawing.Size(0, 100);
+            this.clientHeaderBranding1.MinimumSize = new System.Drawing.Size(500, 90);
+            this.clientHeaderBranding1.Name = "clientHeaderBranding1";
+            this.clientHeaderBranding1.Padding = new System.Windows.Forms.Padding(3);
+            this.clientHeaderBranding1.Size = new System.Drawing.Size(553, 90);
+            this.clientHeaderBranding1.TabIndex = 9;
+            // 
             // SessionsCTRL
             // 
             this.SessionsCTRL.AddressSpaceCtrl = this.BrowseCTRL;
@@ -322,40 +357,6 @@ namespace Opc.Ua.Sample.Controls
             this.NotificationsCTRL.Size = new System.Drawing.Size(553, 107);
             this.NotificationsCTRL.TabIndex = 0;
             // 
-            // EndpointSelectorCTRL
-            // 
-            this.EndpointSelectorCTRL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.EndpointSelectorCTRL.Location = new System.Drawing.Point(0, 114);
-            this.EndpointSelectorCTRL.MaximumSize = new System.Drawing.Size(2048, 27);
-            this.EndpointSelectorCTRL.MinimumSize = new System.Drawing.Size(100, 27);
-            this.EndpointSelectorCTRL.Name = "EndpointSelectorCTRL";
-            this.EndpointSelectorCTRL.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.EndpointSelectorCTRL.SelectedEndpoint = null;
-            this.EndpointSelectorCTRL.Size = new System.Drawing.Size(553, 27);
-            this.EndpointSelectorCTRL.TabIndex = 2;
-            this.EndpointSelectorCTRL.ConnectEndpoint += new Opc.Ua.Client.Controls.ConnectEndpointEventHandler(this.EndpointSelectorCTRL_ConnectEndpoint);
-            this.EndpointSelectorCTRL.EndpointsChanged += new System.EventHandler(this.EndpointSelectorCTRL_OnChange);
-            // 
-            // serverHeaderBranding1
-            // 
-            this.clientHeaderBranding1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.clientHeaderBranding1.BackColor = System.Drawing.Color.White;
-            this.clientHeaderBranding1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.clientHeaderBranding1.Location = new System.Drawing.Point(0, 24);
-            this.clientHeaderBranding1.MaximumSize = new System.Drawing.Size(0, 100);
-            this.clientHeaderBranding1.MinimumSize = new System.Drawing.Size(500, 90);
-            this.clientHeaderBranding1.Name = "serverHeaderBranding1";
-            this.clientHeaderBranding1.Padding = new System.Windows.Forms.Padding(3);
-            this.clientHeaderBranding1.Size = new System.Drawing.Size(553, 90);
-            this.clientHeaderBranding1.TabIndex = 9;
-            // 
-            // DiscoveryServersOnNetworkMI
-            // 
-            this.DiscoveryServersOnNetworkMI.Name = "DiscoveryServersOnNetworkMI";
-            this.DiscoveryServersOnNetworkMI.Size = new System.Drawing.Size(185, 22);
-            this.DiscoveryServersOnNetworkMI.Text = "Servers on Network...";
-            this.DiscoveryServersOnNetworkMI.Click += new System.EventHandler(this.DiscoveryServersOnNetworkMI_Click);
-            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +371,7 @@ namespace Opc.Ua.Sample.Controls
             this.Name = "ClientForm";
             this.Text = "UA Sample Client";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.ClientForm_Load);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.StatusStrip.ResumeLayout(false);

@@ -180,5 +180,10 @@ namespace Opc.Ua.Sample.Controls
             }
         }
         #endregion
+
+        private void ReadDlg_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

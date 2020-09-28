@@ -106,12 +106,12 @@ namespace Opc.Ua.Sample.Controls
             this.SelectSeparatorMI,
             this.BrowseRefreshMI});
             this.PopupMenu.Name = "PopupMenu";
-            this.PopupMenu.Size = new System.Drawing.Size(162, 330);
+            this.PopupMenu.Size = new System.Drawing.Size(181, 330);
             // 
             // BrowseOptionsMI
             // 
             this.BrowseOptionsMI.Name = "BrowseOptionsMI";
-            this.BrowseOptionsMI.Size = new System.Drawing.Size(161, 22);
+            this.BrowseOptionsMI.Size = new System.Drawing.Size(180, 22);
             this.BrowseOptionsMI.Text = "Browse Options...";
             this.BrowseOptionsMI.Click += new System.EventHandler(this.BrowseOptionsMI_Click);
             // 
@@ -121,60 +121,60 @@ namespace Opc.Ua.Sample.Controls
             this.ShowReferencesMI.CheckOnClick = true;
             this.ShowReferencesMI.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ShowReferencesMI.Name = "ShowReferencesMI";
-            this.ShowReferencesMI.Size = new System.Drawing.Size(161, 22);
+            this.ShowReferencesMI.Size = new System.Drawing.Size(180, 22);
             this.ShowReferencesMI.Text = "Show References";
             this.ShowReferencesMI.CheckedChanged += new System.EventHandler(this.ShowReferencesMI_CheckedChanged);
             // 
             // Separator01
             // 
             this.Separator01.Name = "Separator01";
-            this.Separator01.Size = new System.Drawing.Size(158, 6);
+            this.Separator01.Size = new System.Drawing.Size(177, 6);
             // 
             // BrowseMI
             // 
             this.BrowseMI.Name = "BrowseMI";
-            this.BrowseMI.Size = new System.Drawing.Size(161, 22);
+            this.BrowseMI.Size = new System.Drawing.Size(180, 22);
             this.BrowseMI.Text = "Browse...";
             this.BrowseMI.Click += new System.EventHandler(this.BrowseMI_Click);
             // 
             // ViewAttributesMI
             // 
             this.ViewAttributesMI.Name = "ViewAttributesMI";
-            this.ViewAttributesMI.Size = new System.Drawing.Size(161, 22);
+            this.ViewAttributesMI.Size = new System.Drawing.Size(180, 22);
             this.ViewAttributesMI.Text = "View Attributes...";
             this.ViewAttributesMI.Click += new System.EventHandler(this.ViewAttributesMI_Click);
             // 
             // ReadMI
             // 
             this.ReadMI.Name = "ReadMI";
-            this.ReadMI.Size = new System.Drawing.Size(161, 22);
+            this.ReadMI.Size = new System.Drawing.Size(180, 22);
             this.ReadMI.Text = "Read..";
             this.ReadMI.Click += new System.EventHandler(this.ReadMI_Click);
             // 
             // HistoryReadMI
             // 
             this.HistoryReadMI.Name = "HistoryReadMI";
-            this.HistoryReadMI.Size = new System.Drawing.Size(161, 22);
+            this.HistoryReadMI.Size = new System.Drawing.Size(180, 22);
             this.HistoryReadMI.Text = "History Read...";
             this.HistoryReadMI.Click += new System.EventHandler(this.HistoryReadMI_Click);
             // 
             // WriteMI
             // 
             this.WriteMI.Name = "WriteMI";
-            this.WriteMI.Size = new System.Drawing.Size(161, 22);
+            this.WriteMI.Size = new System.Drawing.Size(180, 22);
             this.WriteMI.Text = "Write...";
             this.WriteMI.Click += new System.EventHandler(this.WriteMI_Click);
             // 
             // HistoryUpdateMI
             // 
             this.HistoryUpdateMI.Name = "HistoryUpdateMI";
-            this.HistoryUpdateMI.Size = new System.Drawing.Size(161, 22);
+            this.HistoryUpdateMI.Size = new System.Drawing.Size(180, 22);
             this.HistoryUpdateMI.Text = "History Update...";
             // 
             // EncodingsMI
             // 
             this.EncodingsMI.Name = "EncodingsMI";
-            this.EncodingsMI.Size = new System.Drawing.Size(161, 22);
+            this.EncodingsMI.Size = new System.Drawing.Size(180, 22);
             this.EncodingsMI.Text = "View Encodings...";
             this.EncodingsMI.Click += new System.EventHandler(this.EncodingsMI_Click);
             // 
@@ -183,27 +183,27 @@ namespace Opc.Ua.Sample.Controls
             this.SubscribeMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SubscribeNewMI});
             this.SubscribeMI.Name = "SubscribeMI";
-            this.SubscribeMI.Size = new System.Drawing.Size(161, 22);
+            this.SubscribeMI.Size = new System.Drawing.Size(180, 22);
             this.SubscribeMI.Text = "Subscribe";
             // 
             // SubscribeNewMI
             // 
             this.SubscribeNewMI.Name = "SubscribeNewMI";
-            this.SubscribeNewMI.Size = new System.Drawing.Size(152, 22);
+            this.SubscribeNewMI.Size = new System.Drawing.Size(107, 22);
             this.SubscribeNewMI.Text = "New...";
             this.SubscribeNewMI.Click += new System.EventHandler(this.SubscribeNewMI_Click);
             // 
             // CallMI
             // 
             this.CallMI.Name = "CallMI";
-            this.CallMI.Size = new System.Drawing.Size(161, 22);
+            this.CallMI.Size = new System.Drawing.Size(180, 22);
             this.CallMI.Text = "Call...";
             this.CallMI.Click += new System.EventHandler(this.CallMI_Click);
             // 
             // Separator02
             // 
             this.Separator02.Name = "Separator02";
-            this.Separator02.Size = new System.Drawing.Size(158, 6);
+            this.Separator02.Size = new System.Drawing.Size(177, 6);
             // 
             // SelectMI
             // 
@@ -211,32 +211,32 @@ namespace Opc.Ua.Sample.Controls
             this.SelectItemMI,
             this.SelectChildrenMI});
             this.SelectMI.Name = "SelectMI";
-            this.SelectMI.Size = new System.Drawing.Size(161, 22);
+            this.SelectMI.Size = new System.Drawing.Size(180, 22);
             this.SelectMI.Text = "Select";
             // 
             // SelectItemMI
             // 
             this.SelectItemMI.Name = "SelectItemMI";
-            this.SelectItemMI.Size = new System.Drawing.Size(145, 22);
+            this.SelectItemMI.Size = new System.Drawing.Size(153, 22);
             this.SelectItemMI.Text = "Select Item";
             this.SelectItemMI.Click += new System.EventHandler(this.SelectItemMI_Click);
             // 
             // SelectChildrenMI
             // 
             this.SelectChildrenMI.Name = "SelectChildrenMI";
-            this.SelectChildrenMI.Size = new System.Drawing.Size(145, 22);
+            this.SelectChildrenMI.Size = new System.Drawing.Size(153, 22);
             this.SelectChildrenMI.Text = "Select Children";
             this.SelectChildrenMI.Click += new System.EventHandler(this.SelectChildrenMI_Click);
             // 
             // SelectSeparatorMI
             // 
             this.SelectSeparatorMI.Name = "SelectSeparatorMI";
-            this.SelectSeparatorMI.Size = new System.Drawing.Size(158, 6);
+            this.SelectSeparatorMI.Size = new System.Drawing.Size(177, 6);
             // 
             // BrowseRefreshMI
             // 
             this.BrowseRefreshMI.Name = "BrowseRefreshMI";
-            this.BrowseRefreshMI.Size = new System.Drawing.Size(161, 22);
+            this.BrowseRefreshMI.Size = new System.Drawing.Size(180, 22);
             this.BrowseRefreshMI.Text = "Refresh";
             this.BrowseRefreshMI.Click += new System.EventHandler(this.BrowseRefreshMI_Click);
             // 
